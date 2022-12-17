@@ -1,24 +1,13 @@
-const express = require('express');
-const app = express();
+const app = require('./config/server')
+const rotaNoticias = require('./app/routers/noticias')
+const rotaHome = require('./app/routers/home')
+const rotaFormulario = require('./app/routers/formulario_inclusao_noticias')
 
 
-app.set('view engine', 'ejs');
-app.set('')
+rotaNoticias(app)
+rotaHome(app)
+rotaFormulario(app)
 
-app.get('/', function(req, res){
-    res.render('home/index')
-
-})
-
-app.get('/formulario_inclusao_noticias', function(req, res){
-    res.render('admin/form_add_noticia')
-
-})
-
-app.get('/noticias', function(req, res){
-    res.render('noticias/noticias')
-
-})
 
 app.listen(5000, function(){
     console.log("Servidor rodando com Sucesso!")
