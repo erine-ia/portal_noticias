@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
-consign().include('app/routers').then('config/db.js').into(app)
+consign()
+    .include('app/routers')
+    .then('config/db.js')
+    .then('app/models')
+    .into(app);
 
 module.exports = app
