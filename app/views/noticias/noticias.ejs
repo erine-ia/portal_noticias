@@ -8,5 +8,19 @@
 </head>
 <body>
 	<h1>Portal de Noticias</h1>
+	<table>
+		<tr>
+			<td>Id</td>
+			<td>Titulo</td>
+			<td>Noticias</td>
+		</tr> 
+       <% for(let i = 0; i < noticias.length; i ++){%>
+		<tr>
+			<td><%=noticias[i].id_noticias%></td>
+			<td><%=noticias[i].titulo%></td>
+			<td><%=noticias[i].noticia%></td>
+		</tr>
+		<%}%>
+	</table>
 </body>
 </html>
