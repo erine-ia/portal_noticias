@@ -7,6 +7,19 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>formulario</h1>
+	<h1>Adicionar Noticias</h1>
+	<br>
+	<form action="/noticias/salvar" method="post">
+		<label for="titulo">Titulo</label>
+		<br>
+		<input type="text" name="titulo" id="titulo" placeholder="titulo da noticia">
+		<br> <br>
+		<label for="noticia">noticia</label><br>
+		<textarea name="noticia" id="noticia" cols="30" rows="10"></textarea>
+         <br><br>
+		<input type="submit" value="Enviar">
+
+
+	</form>
 </body>
 </html>
